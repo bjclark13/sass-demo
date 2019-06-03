@@ -1,0 +1,43 @@
+@import 'variables';
+
+body {
+    padding: 12px;
+}
+
+p {
+    color: $primary-color;
+    width: percentageOfBox(150);
+    margin: marginCenter(15);
+    background-color: $secondary-color;
+}
+
+h2 {
+    color: $primary-color;
+    font-size: 24px;
+    width: percentageOfBox(45);
+    margin: auto;
+    background-color: $secondary-color;
+}
+
+div {
+    .flex {
+        @include flex-center;
+    }
+}
+
+button {
+    @include button-rounding;
+}
+
+.button {
+    @include button-rounding;
+    width: 45px;  
+}
+
+.full-width-button {
+    @extend .button;
+    width: percentageOfBox(8)
+}
+
+@import 'nav';
+

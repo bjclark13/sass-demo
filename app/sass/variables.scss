@@ -1,0 +1,32 @@
+$primary-color: #555;
+$secondary-color: blue;
+
+@function lightenColor($color) {
+    @return light + $color;
+}
+
+@function marginCenter($vertical) {
+    @return auto #{$vertical}px;
+}
+
+@function percentageOfBox($size) {
+    @return calc( 100% - #{$size}px );
+}
+
+@mixin flex-center { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@mixin button-rounding {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid lightenColor($secondary-color);
+    color: $primary-color;
+}
